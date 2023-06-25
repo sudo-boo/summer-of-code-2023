@@ -27,4 +27,4 @@ The week 1 was comprised of learning through the given resources and the other e
     - The default `blur_rate` and `threshold_value` is set to the recommended value.
     - This can be adjusted using the **live slider** to get the best configuration to find the dark pores of the metal surface inside the contours and verify the threshold image matches the approximate pore structure
     - Once the desired configuration is obtained press `q` to exit the *image recaliberation* and the value of porosity in `%` will be displayed
-    - *(if the desired value is not obtained just tweak the vaues once more to cover all the pores(dark areas) in cntours)*
+    - *(if the desired value is not obtained just adjust the values to best cover all the pores(dark areas) in cntours)*
