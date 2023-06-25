@@ -1,7 +1,7 @@
 import cv2 as cv
 import numpy as np
 
-def calculate_porosity(image_path, blur_rate=10, threshold_value=125):
+def find_por(image_path, blur_rate=10, threshold_value=125):
 
     # Load the image
     image = cv.imread(image_path, cv.IMREAD_GRAYSCALE)
@@ -50,12 +50,12 @@ def calculate_porosity(image_path, blur_rate=10, threshold_value=125):
 
     # Calculate the porosity
     total_pixels = image.shape[0] * image.shape[1]
-    porosity_pixels = np.sum(opened_image == 0)
+    # porosity_pixels = np.sum(opened_image == 0)
     porosity = (contour_area / total_pixels) * 100
 
     return porosity
 
 # Example usage
 image_path = "sample.jpg"
-porosity = calculate_porosity(image_path)
+porosity = find_por(image_path)
 print("Porosity: {:.2f}%".format(porosity))
