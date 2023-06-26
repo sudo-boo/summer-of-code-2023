@@ -1,7 +1,7 @@
 import cv2 as cv
 import numpy as np
 
-def find_por(image_path, blur_rate=10, threshold_value=125):
+def find_por(image_path, blur_rate=10, threshold_value=140):
 
     # Load the image
     image = cv.imread(image_path, cv.IMREAD_GRAYSCALE)
@@ -41,6 +41,7 @@ def find_por(image_path, blur_rate=10, threshold_value=125):
         cv.drawContours(image_with_contours, contours, -1, (0, 0, 255), 5)
 
         # Display the image with contours
+        cv.imshow("threshold", binary_image)
         cv.imshow("Image with Contours", image_with_contours)
 
         # Check for key press
@@ -56,6 +57,6 @@ def find_por(image_path, blur_rate=10, threshold_value=125):
     return porosity
 
 # Example usage
-image_path = "sample.jpg"
+image_path = "C:\\Users\\omkar\\Videos\\demo\\SoC\\final_code\\sample.jpg"
 porosity = find_por(image_path)
 print("Porosity: {:.2f}%".format(porosity))
