@@ -1,5 +1,5 @@
 
-#  SoC 2k23 - Image Processing and Object Detection
+#  Summer of Code 2023 - Image Processing and Object Detection
 
 
 ## 1) Learning the basics of Python, Numpy, OpenCV
